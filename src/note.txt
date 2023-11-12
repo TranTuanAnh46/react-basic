@@ -1,3 +1,0 @@
-// Đọc khái niệm component là gì 
-Có 2 loại componet : class component và function component ( function , arrow )
-Tìm hiểu JSX là gì

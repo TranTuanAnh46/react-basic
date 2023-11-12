@@ -1,0 +1,22 @@
+
+My component
+    - JSX mình hiểu đơn giản là 1 function javascript trả về 1 khối ( là các thẻ HTML ) 
+                + Bên cạnh đó cú pháp JSX còn hộ trợ - truyền các biến từ javascript vào trong các thẻ của html
+            - Nếu muốn sử dụng console.log ở chỉ có thể truyền vào trong thẻ div như ví dụ dưới
+            - Thằng JSX chỉ trả về 1 khối nếu trong ví dụ dưới mà chúng ta có 2 div độc lập - thì nó sẽ báo lỗi 
+            , do đó cần phải lồng 2 div đó vào chung trong 1 div tổng để trả về
+            - Nếu trong trường hợp bạn không muốn dùng return 1 thẻ div tổng thì ta dùng cú pháp <React.Fragment>
+
+            - Cú pháp <React.Fragment> là các phiên bản cũ - đối với các phiên bản mới ng ta sẽ dùng <> </>
+
+
+My component2
+- state của React là 1 object ( 1 object thì có key và value )
+       - xem ví dụ khai báo phía dưới
+       - Nói chung là state dùng cho việc nếu state bị thay đổi dữ liệu liệu => thì ngay lập tức phần giao diện hoặc JSX sẽ đc thay đổi theo lập tức
+    
+
+My component3
+    - Đây là ví dụ về việc nếu state thay đổi thì - phần giao diện cũng sẽ được thay đổi real time 
+        - trong ví dụ này tôi tạo ra 1 ô input nhập giá trị name - sẽ đc thay đổi realtime   
+    
