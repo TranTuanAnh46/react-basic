@@ -3,44 +3,52 @@ import React from 'react';
 class MyComponent extends React.Component {
 
 
-    /*
-        - JSX mình hiểu đơn giản là 1 function javascript trả về 1 khối ( là các thẻ HTML ) 
-            + Bên cạnh đó cú pháp JSX còn hộ trợ - truyền các biến từ javascript vào trong các thẻ của html
-        - Nếu muốn sử dụng console.log ở chỉ có thể truyền vào trong thẻ div như ví dụ dưới
-        - Thằng JSX chỉ trả về 1 khối nếu trong ví dụ dưới mà chúng ta có 2 div độc lập - thì nó sẽ báo lỗi 
-          , do đó cần phải lồng 2 div đó vào chung trong 1 div tổng để trả về
-        - Nếu trong trường hợp bạn không muốn dùng return 1 thẻ div tổng thì ta dùng cú pháp <React.Fragment>
-
-        - Cú pháp <React.Fragment> là các phiên bản cũ - đối với các phiên bản mới ng ta sẽ dùng <> </>
+    /*  
+        - ở video 7 này chủ yếu là dậy chúng ta cách gọi 1 function trong html 
+        - thì dưới đây là cú pháp để gọi 1 function - nhớ rằng đây là gọi arrow function
+        - có 2 cú pháp gọi function - tôi thấy ông HoiDanIT hay dùng cách số 2
     */
+
+
+    state = {
+        name: 'Tuan Anh11',
+        channel: 'Hoi Dan IT'
+    }
+
+    handlOnChangeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    handleClickButton = () => {
+        alert('click me')
+    }
+
+    handleClickButton2 = () => {
+        alert('click me2')
+    }
 
     render() {
 
         let name = 'TRAN TUAN ANH';
 
         return (
-            //Way1
-            /* 
-            <React.Fragment>
-                < div>
-                    {console.log('minh ten la ai :', name)}
-                    hello my component - My name is {name}
-                </div >
-                < div>
-                    sdfsdfsd
-                </div >
-            </React.Fragment>
-            */
 
-            //Way2
             <>
-                < div>
-                    {console.log('minh ten la ai :', name)}
-                    hello my component - My name is {name}
+                <div className="first">
+                    <input type='text' value={this.state.name} onChange={(event) => this.handlOnChangeName(event)} />
+                    hello my component - My name is {this.state.name}
                 </div >
-                < div>
-                    sdfsdfsd
+                < div className="second">
+                    My youtube channel {this.state.channel}
                 </div >
+
+
+                <div className='third'>
+                    <button onClick={() => { this.handleClickButton() }}>Click me</button>
+                    <button onClick={() => this.handleClickButton2()}>Click me2</button>
+                </div>
             </>
         )
     }

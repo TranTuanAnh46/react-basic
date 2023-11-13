@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent3 from './example/MyComponent3';
+import MyComponent from './example/MyComponent';
 function App() {
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
 
-        <MyComponent3 />
+        <MyComponent />
       </header>
     </div>
   );
